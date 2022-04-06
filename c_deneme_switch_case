@@ -1,0 +1,75 @@
+#include <stdio.h>
+void menu();
+int sayial();
+int sayigir();
+void topla();
+void cikar();
+void carp();
+
+int main(){
+    int x;
+    do{
+        menu(); 
+        x=sayial();
+
+        switch(x){
+            case 1: topla();break;
+            case 2: cikar();break;
+            case 3: carp();break;
+            case 4: printf("Program Bitiyor\n");break;
+            default: printf("Yanlis secim\n");
+        }
+        system("PAUSE");
+        system("CLS");
+    }while(x !=4);
+    
+    system("PAUSE");
+}
+
+
+void menu(){
+    printf("MENU\n");
+    printf("1- Toplama\n");
+    printf("2- Cikarma\n");
+    printf("3- Carpma\n");
+    printf("4- CIKIS\n");
+}
+
+int sayial(){
+    int x;
+    printf("Bir secim yapiniz:");
+    scanf("%d",&x);
+    return x;
+}
+
+int sayigir(){
+    int x;
+    printf("Bir sayi giriniz:");
+    scanf("%d",&x);
+    return x;
+}
+
+void topla(){
+    int x,y,sonuc;
+    x=sayigir();
+    y=sayigir();
+    sonuc=x+y;
+    printf("Toplam: %d",sonuc);
+}
+
+void cikar(){
+    int x,y,sonuc;
+    x=sayigir();
+    y=sayigir();
+    sonuc=x-y;
+    printf("Sonuc: %d",sonuc);
+}
+    
+void carp(){
+    int x,y,sonuc;
+    x=sayigir();
+    y=sayigir();
+    sonuc=x*y;
+    printf("Carpim: %d",sonuc);
+}    
+        
