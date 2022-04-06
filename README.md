@@ -1,1 +1,2 @@
 # KodluyoruzIlkRepo
+# www.patika.dev
